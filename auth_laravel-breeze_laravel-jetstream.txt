@@ -1,0 +1,71 @@
+
+Laravel Breeze adalah pilihan yang sangat baik untuk menjalankan berbagai hal dengan cepat.
+Jetstream menawarkan autentikasi dua faktor, token API, dan manajemen tim.
+Jika Anda mencari lebih banyak fitur, Jetstream adalah pilihan yang tepat untuk Anda.
+
+
+Instal Laravel Breeze
+=====================
+
+$> composer create-project laravel/laravel project-name
+$> cd project-name
+
+$> composer require laravel/breeze --dev
+$> php artisan breeze:install
+
+Jika berhasil :
+INFO  Breeze scaffolding installed successfully.
+
+Berikutnya, instal dependensi front-end dan kompilasi aset frontend dengan menjalankan perintah berikut.
+$> npm install && npm run dev
+
+$> ./artisan serve
+
+Setelah aplikasi dimulai, buka aplikasi di peramban pilihan Anda.
+Secara default, aplikasi tersedia di http://127.0.0.1:8000.
+Anda akan dapat melihat halaman Laravel default dengan tautan masuk dan daftar di bagian atas.
+
+
+Struktur file dan direktori Breeze
+==================================
+
+Routes
+Rute adalah cara membuat URL permintaan untuk aplikasi Anda.
+Rute didefinisikan dalam berkas routes/auth.php.
+Jika Anda melihat berkas tersebut, Anda akan melihat daftar rute autentikasi yang mencakup rute untuk masuk, registrasi, pengaturan ulang kata sandi, validasi email, konfirmasi kata sandi, dan keluar.
+Rute tersebut disertakan langsung dalam berkas web.php Anda  dengan baris berikut:
+require__DIR__.'/auth.php';
+
+Controllers
+Kelas Auth Controller disimpan di app/Http/Controllers/Auth/ . Di folder tersebut, terdapat kontroler berikut:
+- AuthenticatedSessionController.php
+- ConfirmablePasswordController.php
+- EmailVerificationNotificationController.php
+- EmailVerificationPromptController.php
+- NewPasswordController.php
+- PasswordController.php
+- PasswordResetLinkController.php
+- RegisteredUserController.php
+- VerifyEmailController.php
+
+Views
+Tampilan memisahkan pengontrol dan logika domain dari logika presentasi, dan terletak di resources/views/auth/ . Daftar tampilan blade yang tersedia meliputi:
+- confirm-password.blade.php
+- forgot-password.blade.php
+- login.blade.php
+- register.blade.php
+- reset-password.blade.php
+- verify-email.blade.php
+
+
+Kapan Anda harus menggunakan Breeze?
+Breeze cocok untuk Anda saat:
+1. Aplikasi Anda sebagian besar terdiri dari templat Blade atau jika Anda ingin menambahkan autentikasi dengan cepat ke aplikasi tanpa memerlukan banyak opini kode
+2. Anda ingin mengubah fungsi autentikasi aplikasi Anda dengan cepat
+3. Anda sedang membangun aplikasi dari awal yang tidak memerlukan fitur yang disediakan Fortify  atau Jetstream
+4. Anda hanya menginginkan UI Laravel yang lebih terkini
+
+
+
+
+=================== PUDIN.MY.ID =========================
