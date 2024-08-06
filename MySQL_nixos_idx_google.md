@@ -72,4 +72,15 @@ services.mysql = {
 <pre>
   <code>mysqldump -u root -p --all-databases > alldb.sql</code>
 </pre>
+<br/>
+<pre>
+  <code>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+  </code>
+</pre>
 <h1>PUDIN.MY.ID</h1>
