@@ -1,6 +1,6 @@
 <h1>MySQL</h1>
 <p>MySQL adalah sistem manajemen basis data relasional (RDBMS) sumber terbuka yang banyak digunakan dan menawarkan berbagai fitur, alat, dan layanan untuk pergudangan data, analisis, pembelajaran mesin, dan banyak lagi. MariaDB adalah cabang MySQL yang populer dan stabil yang kompatibel dengan MySQL dan memiliki penyempurnaan dan fitur tambahan.</p>
-<p><a href="https://nixos.wiki/wiki/Mysql">Dokumentasi</a></p>
+<p><a href="https://nixos.wiki/wiki/Mysql" target="_blank">Dokumentasi</a></p>
 
 <h3>Mempersiapkan</h3>
 <p>Menyiapkan dan mengaktifkan daemon database Mysql (MariaDB)</p>
