@@ -5,7 +5,7 @@
 <pre>
   <code>php artisan make:component Topbar --view</code>
 </pre>
-
+<hr/>
 <p>Penerapa/Pemanggilannya</p>
 <p></p><x-navbar></x-navbar></p>
 <br/>
