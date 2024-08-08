@@ -7,10 +7,6 @@
 </pre>
 
 <p>Penerapa/Pemanggilannya</p>
-<pre>
-  <code><x-navbar><x-navbar></code>
-</pre>
+<p></p><x-navbar></x-navbar></p>
 <br/>
-<pre>
-  <code><x-topbar><x-topbar></code>
-</pre>
+<p><x-topbar></x-topbar></p>
