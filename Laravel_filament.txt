@@ -1,0 +1,44 @@
+LARAVEL FILAMENT
+================
+
+https://pecl.php.net/package/mcrypt
+
+INSTALL LARAVEL
+> composer create-project laravel/laravel pdn-filament
+
+
+https://filamentphp.com/docs/4.x/introduction/installation
+Filament 4
+> npm install && npm run build
+Config inv databasae
+> php artisan migrate
+
+> composer require filament/filament:"^4.0"
+> php artisan filament:install --panels
+> php artisan make:filament-user
+
+> composer run dev (jika error karena pcntl)
+> php artisan server
+= localhost:8000/admin/login
+
+Mulai membuat Post
+> php artisan make:model Post -m
+Sesuaikan migratenya nya
+> php artisan migrate
+
+
+App > Models
+Post.php
+dalam class :
+	protected $fillable = [
+		'title',
+		'body'
+	];
+
+FILAMENT
+> php artisan make:filament-resource Post --simple
+
+
+
+
+============= PUDIN SAEPUDIN : ITALAZHAR.COM
