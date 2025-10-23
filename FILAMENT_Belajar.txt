@@ -39,6 +39,7 @@ dalam class :
 
 FILAMENT
 > php artisan make:filament-resource Post --simple
+> php artisan make:filament-resource User --simple
 
 
 
