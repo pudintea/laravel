@@ -2,23 +2,29 @@ IDX STUDIO FIREBAS
 ====================
 .idx/dev.nix
 
- packages = [
+  packages = [
     pkgs.php84
     pkgs.php84Packages.composer
     pkgs.nodejs_22
   ];
 
-# MariaDB
-services.mysql = {
-  enable = true;
-  package = pkgs.mariadb;
-};
+  packages = [
+    pkgs.php83
+    pkgs.php83Packages.composer
+    pkgs.nodejs_22
+  ];
 
-# MySql
-services.mysql = {
-  enable = true;
-  package = pkgs.mysql80;
-};
+ # MariaDB
+ services.mysql = {
+   enable = true;
+   package = pkgs.mariadb;
+ };
+ 
+ # MySql
+ services.mysql = {
+   enable = true;
+   package = pkgs.mysql80;
+ };
 
 
 
