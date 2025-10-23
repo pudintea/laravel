@@ -1,0 +1,25 @@
+IDX STUDIO FIREBAS
+====================
+.idx/dev.nix
+
+ packages = [
+    pkgs.php84
+    pkgs.php84Packages.composer
+    pkgs.nodejs_22
+  ];
+
+# MariaDB
+services.mysql = {
+  enable = true;
+  package = pkgs.mariadb;
+};
+
+# MySql
+services.mysql = {
+  enable = true;
+  package = pkgs.mysql80;
+};
+
+
+
+===== Pudin Saepudin : italazhar.com
