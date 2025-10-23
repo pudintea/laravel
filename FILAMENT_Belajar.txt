@@ -25,6 +25,8 @@ Config inv databasae
 
 Mulai membuat Post
 > php artisan make:model Post -m
+> php artisan make:model Unit -m
+> php artisan make:model Surat -m
 Sesuaikan migratenya nya
 > php artisan migrate
 
@@ -40,6 +42,65 @@ dalam class :
 FILAMENT
 > php artisan make:filament-resource Post --simple
 > php artisan make:filament-resource User --simple
+> php artisan make:filament-resource Unit --simple
+> php artisan make:filament-resource Surat --simple
+
+
+CUSTOM favicon
+===============
+app/Providers/Filament/AdminPanelProvider.php
+
+use Filament\Panel;
+
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        // Favicon
+        ->favicon(asset('images/favicon.png'))
+		// Logo
+		->brandName('Pekerjaan')
+}
+
+
+USERS
+=======
+app/Filament/Resources/Users/Pages/UsersResource.php
+
+    public static function form(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextInput::make('name')
+                    ->required(),
+                TextInput::make('email')
+                    ->label('Email address')
+                    ->email()
+                    ->required(),
+                TextInput::make('password')
+                    ->label('Password')
+                    ->password()
+                    ->required(fn ($operation) => $operation === 'create') // wajib hanya saat create
+                    ->minLength(6)
+                    ->same('password_confirmation')
+                    // agar saat edit tidak menimpa password lama kalau tidak diisi
+                    ->dehydrateStateUsing(fn ($state) => filled($state) ? \Illuminate\Support\Facades\Hash::make($state) : null)
+                    ->dehydrated(fn ($state) => filled($state)),
+                TextInput::make('password_confirmation')
+                    ->label('Konfirmasi Password')
+                    ->password()
+                    ->required(fn ($operation) => $operation === 'create')
+                    ->dehydrated(false), // tidak disimpan ke DB
+            ]);
+    }
+
+
+
+
+
+
+
+
+
 
 
 
